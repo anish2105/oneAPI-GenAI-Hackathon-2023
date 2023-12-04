@@ -3,8 +3,8 @@
 #### Problem Statement - AI-Enhanced Legal Practice Platform
 #### Team Leader Email - anishvv212002@gmail.com
 
-### A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
+### An Overview of the Prototype:
+
   ![image](https://github.com/anish2105/oneAPI-GenAI-Hackathon-2023/assets/75316315/1d085823-7d11-4d68-8f98-eb510f33b605)
 
   
