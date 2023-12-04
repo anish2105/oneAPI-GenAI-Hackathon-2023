@@ -1,32 +1,32 @@
-# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
 
-Welcome to the official repository for the oneAPI-GenAI-Hackathon-2023 organized by Hack2Skill!
-
-## Getting Started
-
-To get started with the oneAPI-GenAI-Hackathon-2023 repository, follow these steps:
-
-### Submission Instruction:
-  1. Fork this repository
-  2. Create a folder with your Team Name
-  3. Upload all the code and necessary files in the created folder
-  4. Upload a **README.md** file in your folder with the below mentioned informations.
-  5. Generate a Pull Request with your Team Name. (Example: submission-XYZ_team)
-
-### README.md must consist of the following information:
-
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+#### Team Name - 404Found
+#### Problem Statement - AI-Enhanced Legal Practice Platform
+#### Team Leader Email - anishvv212002@gmail.com
 
 ### A Brief of the Prototype:
   This section must include UML Diagrams and prototype description
+  ![image](https://github.com/anish2105/oneAPI-GenAI-Hackathon-2023/assets/75316315/1d085823-7d11-4d68-8f98-eb510f33b605)
+
+  
   
 ### Tech Stack: 
-   List Down all technologies used to Build the prototype
+   ● Python 
+   ● Langchain
+   ● Flask/FastAPI 
+   ● JavaScript 
+   ● Intel® oneAPI Data Analytics Library
+   ● Intel® Optimization for PyTorch
+   ● Large Language Models
+   ● Intel developer cloud
+   ● Streamlit
+   ● OpenAI (for embedding)
+   ● ngrok
+   
    
 ### Step-by-Step Code Execution Instructions:
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
   
 ### Future Scope:
-   Write about the scalability and futuristic aspects of the prototype developed
+   ● Further improvements to the user interface are required.
+   ● A variety of open-source embeddings are available for use.
+   ● We are currently utilizing a dataset that only includes information about women and children, but we plan to eventually add the entire constitution.
