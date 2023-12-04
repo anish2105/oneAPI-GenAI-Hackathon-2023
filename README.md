@@ -26,6 +26,6 @@
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
   
 ### Future Scope:
-   ● Further improvements to the user interface are required.
-   ● A variety of open-source embeddings are available for use.
-   ● We are currently utilizing a dataset that only includes information about women and children, but we plan to eventually add the entire constitution.
+*    Further improvements to the user interface are required.
+*    A variety of open-source embeddings are available for use.
+*    We are currently utilizing a dataset that only includes information about women and children, but we plan to eventually add the entire constitution.
