@@ -10,7 +10,7 @@
   
   
 ### Tech Stack: 
-   ● Python 
+   ● Python \n
    ● Langchain
    ● Flask/FastAPI 
    ● JavaScript 
