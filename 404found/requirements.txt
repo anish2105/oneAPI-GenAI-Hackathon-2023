@@ -1,0 +1,10 @@
+transformers
+huggingface_hub
+langchain
+text-generation
+sentence_transformers
+pdfplumber
+faiss-cpu
+tiktoken
+openai
+streamlit
