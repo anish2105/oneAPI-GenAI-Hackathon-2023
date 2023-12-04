@@ -10,18 +10,17 @@
   
   
 ### Tech Stack: 
-   ● Python \n
-   ● Langchain
-   ● Flask/FastAPI 
-   ● JavaScript 
-   ● Intel® oneAPI Data Analytics Library
-   ● Intel® Optimization for PyTorch
-   ● Large Language Models
-   ● Intel developer cloud
-   ● Streamlit
-   ● OpenAI (for embedding)
-   ● ngrok
-   
+*    Python 
+*    Langchain
+*    Flask/FastAPI 
+*    JavaScript 
+*    Intel® oneAPI Data Analytics Library
+*    Intel® Optimization for PyTorch
+*    Large Language Models
+*    Intel developer cloud
+*    Streamlit
+*    OpenAI (for embedding)
+*    ngrok
    
 ### Step-by-Step Code Execution Instructions:
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
