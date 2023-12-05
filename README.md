@@ -23,7 +23,6 @@
 *    Large Language Models
 *    Intel developer cloud
 *    Streamlit
-*    OpenAI (for embedding)
 *    ngrok
    
 ### Step-by-Step Code Execution Instructions:
