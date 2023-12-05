@@ -1,20 +1,19 @@
 import streamlit as st
 import os
+from streamlit import session_state
 import pdfplumber
 from langchain.document_loaders.base import Document
 from langchain.chains import RetrievalQA
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.vectorstores import FAISS, Chroma
 from langchain.llms import HuggingFaceHub
-from langchain.embeddings import OpenAIEmbeddings
-
+from langchain.embeddings import HuggingFaceEmbeddings
 
 # Set environment variables
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = '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'
-os.environ["OPENAI_API_KEY"] = "Openai"
 
 # Embedding
-embeddings = OpenAIEmbeddings()
+embeddings = HuggingFaceEmbeddings(model_name="jinaai/jina-embedding-s-en-v1")
 
 # Load PDF documents
 def pdf_loader(pdf_file):
@@ -40,16 +39,6 @@ text_splitter = CharacterTextSplitter(
 docs = text_splitter.split_documents(documents)
 db = FAISS.from_documents(docs, embeddings)
 
-#prompt
-# prompt = '''
-# Your name is Senor, you are an AI Assistant for Lawyers
-# Use the following pieces of context to answer the users question, answer should be short
-# If you can't find answers in the context, just say "I'm sorry, I only answer for women and childer rights", don't try to make up an answer.
-# ALWAYS answer from the perspective of being Senor
-
-# '''
-
-
 # LLM
 repo_id = 'HuggingFaceH4/zephyr-7b-beta'
 llm = HuggingFaceHub(
@@ -61,13 +50,35 @@ qa = RetrievalQA.from_chain_type(llm=llm,
                                  return_source_documents=True,
                                  verbose=True,
                                  )
-# qa.combine_documents_chain.llm_chain.prompt.template = prompt
+
 # Streamlit app
 st.title("SenOR - AI for Lawyers")
 
-# Query input
-query = st.text_input("Enter your legal query:")
-if st.button("Submit"):
-    result = qa(query)
-    st.write("Answer:", result['result'])
+# Initialize chat history if not present
+if 'chat_history' not in st.session_state:
+    st.session_state.chat_history = []
 
+# Display chat history with custom styling for larger text
+for entry in st.session_state.chat_history:
+    if entry["role"] == "user":
+        st.markdown(f"**User:** {entry['message']}")
+    else:
+        st.markdown(f"**SenOR:** {entry['message']}", unsafe_allow_html=True)
+
+# Chatbot interface
+st.subheader("Chat with SenOR")
+
+# Chat input
+user_query = st.text_area("User Input", "")
+if st.button("Submit"):
+    # Add user query to chat history
+    st.session_state.chat_history.append({"role": "user", "message": user_query})
+
+    # Get SenOR's response
+    senor_response = qa(user_query)["result"]
+
+    # Add SenOR's response to chat history
+    st.session_state.chat_history.append({"role": "senor", "message": senor_response})
+
+    # Display SenOR's response after submission
+    st.markdown(f"**SenOR:** {senor_response}", unsafe_allow_html=True)
