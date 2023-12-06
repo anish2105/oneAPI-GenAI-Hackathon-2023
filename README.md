@@ -26,8 +26,40 @@
 *    ngrok
    
 ### Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
-  
+  Clone the project
+
+```bash
+  git clone https://github.com/anish2105/oneAPI-GenAI-Hackathon-2023.git
+```
+ Create a virtual envirnoment
+ 1. Use the cd command to navigate to the directory where you want to create the virtual environment. For example:
+```bash
+  cd path/to/your/project
+```
+ 2. Use the following command to create a virtual environment named venv:
+```bash
+  python -m venv venv
+```
+ 3. To activate the virtual environment, navigate to the Scripts directory inside the venv folder and run the activate script. Use the following command:
+```bash
+  venv\Scripts\activate
+```
+Install dependencies
+
+```bash
+  pip install -r requirements.txt
+```
+
+Start the server
+
+```bash
+  python app.py
+```
+---
+ 4. To deactivate the virtual environment,  Use the following command:
+```bash
+  deactivate
+``` 
 ### Future Scope:
 *    Further improvements to the user interface are required.
 *    A variety of open-source embeddings are available for use.
