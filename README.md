@@ -51,7 +51,7 @@ Install dependencies
 Start the server
 
 ```bash
-  streamlit run streamlit_chat.py
+  streamlit run chat.py
 ```
 ---
  4. To deactivate the virtual environment,  Use the following command:
