@@ -16,8 +16,6 @@
 ### Tech Stack: 
 *    Python 
 *    Langchain
-*    Flask/FastAPI 
-*    JavaScript 
 *    Intel® oneAPI Data Analytics Library
 *    Intel® Optimization for PyTorch
 *    Large Language Models
