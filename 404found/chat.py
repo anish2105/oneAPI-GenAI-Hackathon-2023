@@ -12,7 +12,7 @@ from langchain.llms import HuggingFaceHub
 from langchain.embeddings import HuggingFaceEmbeddings
 
 # Set environment variables
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = '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'
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = 'your-key'
 
 # Embedding
 embeddings = HuggingFaceEmbeddings(model_name="jinaai/jina-embedding-s-en-v1")
